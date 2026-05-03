@@ -1,5 +1,6 @@
 {
   "name": "@hexlet/code",
+  "type": "module",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/qwekertarsionov-eng/backend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/qwekertarsionov-eng/backend-project-44/actions)",
   "homepage": "https://github.com/qwekertarsionov-eng/backend-project-44#readme",
@@ -12,7 +13,6 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
