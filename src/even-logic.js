@@ -9,17 +9,17 @@ export const runEvenGame = () => {
     return round === 0
       ? console.log(`Congratulations, ${name}!`)
       : (() => {
-        const number = Math.floor(Math.random() * 100)
-        const correctAnswer = number % 2 === 0 ? 'yes' : 'no'
+          const number = Math.floor(Math.random() * 100)
+          const correctAnswer = number % 2 === 0 ? 'yes' : 'no'
 
-        console.log(`Question: ${number}`)
-        const userAnswer = readlineSync.question('Your answer: ')
+          console.log(`Question: ${number}`)
+          const userAnswer = readlineSync.question('Your answer: ')
 
-        return userAnswer === correctAnswer
-          ? (console.log('Correct!'), playRound(round - 1))
-          : (console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`),
-          console.log(`Let's try again, ${name}!`))
-      })()
+          return userAnswer === correctAnswer
+            ? (console.log('Correct!'), playRound(round - 1))
+            : (console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`),
+              console.log(`Let's try again, ${name}!`))
+        })()
   }
 
   playRound(3)

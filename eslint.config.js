@@ -14,8 +14,15 @@ export default defineConfig([
       '@stylistic': stylistic,
     },
     rules: {
-      // Настройка отступов: 2 пробела
-      '@stylistic/indent': ['error', 2],
+      // Настройка отступов под ваш код
+      '@stylistic/indent': ['error', 2, {
+        // Автоматически выравнивает тернарные выражения, как в вашем примере
+        offsetTernaryExpressions: true,
+        // Корректно обрабатывает отступы при объявлении переменных
+        VariableDeclarator: 1,
+        // Корректно обрабатывает внешние конструкции
+        outerIIFEBody: 1,
+      }],
 
       // Использование одинарных кавычек (вместо двойных)
       '@stylistic/quotes': ['error', 'single'],
