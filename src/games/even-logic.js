@@ -8,10 +8,10 @@ export const runEvenGame = () => {
   for (let i = 0; i < roundsCount; i += 1) {
     const number = Math.floor(Math.random() * 100)
     const correctAnswer = number % 2 === 0 ? 'yes' : 'no'
-    
+
     rounds.push({
       key: String(number),
-      value: correctAnswer
+      value: correctAnswer,
     })
   }
 
